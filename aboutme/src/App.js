@@ -1,22 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>About me</h1>
+        <p>by Brian Becker</p>
+        <li>Bio</li>
+        <p>I prefer a team oriented workspace.</p>
+
+        <li>Why Helio?</li>
+        <p>Why not?</p>
+
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          //className="App-link"
+          href="WorkExperience.js"
+        // target="_blank"
+        //rel="noopener noreferrer"
         >
-          Learn React
+          Work Experience
         </a>
       </header>
     </div>
