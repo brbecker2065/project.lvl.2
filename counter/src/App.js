@@ -33,7 +33,7 @@ function App() {
 
     }
     render() {
-      let { count }: this.state
+      let { count } = this.state
       return (
 
         <div>
