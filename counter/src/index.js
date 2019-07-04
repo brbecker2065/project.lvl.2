@@ -1,8 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './redux/reducers';
+
+const store = createStore(rootReducer);
+
+
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -19,39 +28,34 @@ class Counter extends React.Component {
             count: 0
         }
 
+    }
+    increment = () => {
+        this.setState({
+            count: this.state.count + 1
 
-        increment = () => {
-            this.setState({
-                count: this.state.count + 1
-
-            });
-
-        }
-        decrement = () => {
-            this.setState({
-                count: this.state.count - 1
-            });
-        };
-
-        //      reset = ()=> {
-        //      this.setState({
-        //          this.state.count: 0
-        //  }
-        //  }
+        });
 
     }
+    decrement = () => {
+        this.setState({
+            count: this.state.count - 1
+        });
+    };
+
+
+
     render() {
 
         return (
+            <body>
+                <div>
+                    <button className='inc' onClick={this.increment}>Increment!</button>
+                    <button className='dec' onClick={this.decrement}>Decrement!</button>
 
-            <div>
-                <button className='inc' onClick={this.increment}>Increment!</button>
-                <button className='dec' onClick={this.decrement}>Decrement!</button>
-                <button className='reset' onClick={this.reset}>Reset</button>
-                <h1>Current Count: {this.state.count}</h1>
+                    <h1>Current Count: {this.state.count}</h1>
 
-            </div>
-
+                </div>
+            </body>
         );
     };
 };
