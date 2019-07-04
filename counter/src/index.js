@@ -9,19 +9,23 @@ import rootReducer from './redux/reducers';
 
 const store = createStore(rootReducer);
 
-
-
-
-
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()
 
 
-class Counter extends React.Component {
+
+
+
+/*class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -61,3 +65,4 @@ class Counter extends React.Component {
 };
 
 export default Counter;
+*/

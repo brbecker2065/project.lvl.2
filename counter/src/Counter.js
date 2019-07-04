@@ -36,7 +36,7 @@ class Counter extends React.Component {
             <div>
                 <button className='inc' onClick={this.increment}>Increment!</button>
                 <button className='dec' onClick={this.decrement}>Decrement!</button>
-                <h1>Current Count: {this.state.count}</h1>
+                <h1>Current Count: {this.props.count}</h1>
 
             </div>
         )
